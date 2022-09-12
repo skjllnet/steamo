@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #00378f;
+  --color-primary-dark: #001029;
+  --color-primary-light: #60efff;
+
+  --color-grey-light: #faf9f9;
+  --color-grey-dark: #777;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--color-grey-light);
+  background-image: linear-gradient(
+    to right bottom,
+    var(--color-primary),
+    var(--color-primary-dark)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  min-height: 100vh;
+}
