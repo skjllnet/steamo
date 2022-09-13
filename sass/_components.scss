@@ -1,0 +1,178 @@
+//////////////////////////////////////////////////
+/// LINKS TOP LEFT
+
+.list {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  list-style: none;
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 1.75rem;
+    }
+
+    &--link {
+      text-decoration: none;
+      color: var(--color-grey-dark);
+
+      &:hover {
+        color: var(--color-grey-light);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+/// USER PROFILE & NOTIFICATIONS
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 3rem;
+
+  & > *:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__icon {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-grey-light);
+  }
+
+  &__icon-1 {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-grey-light);
+  }
+
+  &__icon-2 {
+    height: 1.5rem;
+    width: 1.5rem;
+    fill: var(--color-grey-light);
+  }
+
+  &__notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 50px;
+    background-color: var(--color-grey-dark);
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+
+  &__message {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 0 0 50px;
+    background-color: var(--color-grey-dark);
+    padding: 0.5rem 1rem;
+
+    &:hover {
+      background-color: green;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    height: 3rem;
+    background-color: var(--color-primary);
+
+    &--image {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &--profile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.65rem;
+      border-left: 2px solid var(--color-primary-light);
+      opacity: 0.8;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+/// OPTIONS
+
+.options {
+  display: flex;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+/// ICON
+
+.icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: var(--color-grey-dark);
+
+  &:hover {
+    fill: var(--color-grey-light);
+  }
+}
+
+//////////////////////////////////////////////////
+/// BOTTOM NAVIGATION
+
+.list-bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -1rem;
+
+  .arrows {
+    margin-right: 1.4rem;
+
+    &__svg {
+      fill: var(--color-grey-dark);
+      width: 4rem;
+      height: 4rem;
+
+      &:hover {
+        fill: var(--color-grey-light);
+      }
+    }
+  }
+}
+
+.list-item-bottom {
+  list-style: none;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+  &:not(:last-child) {
+    margin-right: 1.75rem;
+  }
+
+  &-link {
+    text-decoration: none;
+    color: var(--color-grey-dark);
+
+    &:hover {
+      color: var(--color-grey-light);
+    }
+  }
+}

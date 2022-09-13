@@ -26,6 +26,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
+  font-size: 1.2rem;
   line-height: 1.6;
   color: var(--color-grey-light);
   background-image: linear-gradient(
@@ -37,4 +38,10 @@ body {
   background-repeat: no-repeat;
 
   min-height: 100vh;
+}
+
+.navigation {
+  display: grid;
+  padding: 2rem 1.25rem;
+  background-color: var(--color-primary-dark);
 }
