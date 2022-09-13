@@ -140,16 +140,15 @@
 .list-bottom {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
   margin-left: -1rem;
 
   .arrows {
-    margin-right: 1.4rem;
+    margin-right: 1rem;
 
     &__svg {
       fill: var(--color-grey-dark);
-      width: 4rem;
-      height: 4rem;
+      width: 3rem;
+      height: 3rem;
 
       &:hover {
         fill: var(--color-grey-light);
@@ -160,7 +159,7 @@
 
 .list-item-bottom {
   list-style: none;
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: uppercase;
 
   &:not(:last-child) {
