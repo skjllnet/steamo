@@ -114,7 +114,8 @@ body {
 .icon {
   width: 1.5rem;
   height: 1.5rem;
-  fill: var(--color-grey-dark); }
+  fill: var(--color-grey-dark);
+  transition: all 0.3s ease; }
   .icon:hover {
     fill: var(--color-grey-light); }
 
@@ -135,6 +136,7 @@ body {
 .list-item-bottom {
   list-style: none;
   font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase; }
   .list-item-bottom:not(:last-child) {
     margin-right: 1.75rem; }
@@ -158,7 +160,7 @@ body {
   font-size: 1.1rem;
   color: var(--color-grey-light);
   text-transform: uppercase;
-  padding: 0 0 1rem 0; }
+  padding: 0 0 1rem 1rem; }
   .image__cards {
     width: 100%; }
   .image__link {
@@ -171,7 +173,8 @@ body {
       color: var(--color-grey-light); }
 
 .sidelist {
-  list-style: none; }
+  list-style: none;
+  padding-left: 1rem; }
   .sidelist__title {
     text-transform: uppercase;
     margin: 1rem 0 0.5rem 0; }
@@ -273,3 +276,9 @@ body {
 .container {
   display: flex;
   padding-top: 13rem; }
+
+.slider {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  background-color: red; }

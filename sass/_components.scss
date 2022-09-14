@@ -140,6 +140,7 @@
   width: 1.5rem;
   height: 1.5rem;
   fill: var(--color-grey-dark);
+  transition: all 0.3s ease;
 
   &:hover {
     fill: var(--color-grey-light);
@@ -173,6 +174,7 @@
 .list-item-bottom {
   list-style: none;
   font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase;
 
   &:not(:last-child) {
@@ -212,7 +214,7 @@
   font-size: 1.1rem;
   color: var(--color-grey-light);
   text-transform: uppercase;
-  padding: 0 0 1rem 0;
+  padding: 0 0 1rem 1rem;
 
   &__cards {
     width: 100%;
@@ -233,6 +235,7 @@
 
 .sidelist {
   list-style: none;
+  padding-left: 1rem;
 
   &__title {
     text-transform: uppercase;
