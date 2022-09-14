@@ -198,7 +198,7 @@
 .content {
   display: flex;
 
-  width: 140rem;
+  width: 130rem;
   margin: 0 auto;
 }
 
@@ -407,7 +407,7 @@
 }
 
 .slider__main {
-  background-image: url(/img/screenshot.jpg);
+  background-image: url(/img/screenshot_2.jpg);
   background-size: cover;
   background-repeat: none;
   flex: 0 0 50%;
@@ -427,6 +427,41 @@
     display: flex;
     font-size: 1.8rem;
     font-weight: 400;
+    margin-top: 1rem;
+  }
+
+  &--grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    &-img-1 {
+      background-image: url(/img/screenshot.jpg);
+      background-size: cover;
+      width: 17rem;
+      height: 8rem;
+    }
+
+    &-img-2 {
+      background-image: url(/img/screenshot_4.jpg);
+      background-size: cover;
+      width: 17rem;
+      height: 8rem;
+    }
+
+    &-img-3 {
+      background-image: url(/img/screenshot_3.jpg);
+      background-size: cover;
+      width: 17rem;
+      height: 8rem;
+    }
+
+    &-img-4 {
+      background-image: url(/img/screenshot_1.jpg);
+      background-size: cover;
+      width: 17rem;
+      height: 8rem;
+    }
   }
 
   &--highlight {
@@ -437,7 +472,7 @@
   &--tags {
     display: flex;
     gap: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0.2rem;
     margin-bottom: 2rem;
   }
 
@@ -477,10 +512,14 @@
   }
 
   &--os {
+    margin-right: 2rem;
+
     &-icon {
       width: 2rem;
       height: 2rem;
       fill: var(--color-grey-light);
+      margin-left: 0.5rem;
+      opacity: 0.5;
     }
   }
 }
@@ -521,7 +560,7 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 110%;
+  width: 111%;
 
   &--svg {
     width: 5rem;
@@ -531,7 +570,7 @@
 }
 
 .left {
-  height: 13rem;
+  height: 12rem;
   background-image: linear-gradient(
     to right,
     rgba(96, 239, 255, 0.5) 30%,
@@ -546,7 +585,7 @@
 }
 
 .right {
-  height: 13rem;
+  height: 12rem;
   background-image: linear-gradient(
     to right,
     rgba(0, 55, 143, 0.1) 30%,
