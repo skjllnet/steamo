@@ -1,5 +1,21 @@
+.navigation {
+  display: grid;
+  position: fixed;
+  width: 100%;
+  padding: 2rem 1.25rem;
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+  z-index: 999;
+}
+
 .navigation__top {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.container {
+  display: flex;
+  padding-top: 13rem;
 }

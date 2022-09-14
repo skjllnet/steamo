@@ -15,6 +15,7 @@
     &--link {
       text-decoration: none;
       color: var(--color-grey-dark);
+      transition: color 0.3s ease;
 
       &:hover {
         color: var(--color-grey-light);
@@ -149,6 +150,7 @@
       fill: var(--color-grey-dark);
       width: 3rem;
       height: 3rem;
+      transition: fill 0.3s ease;
 
       &:hover {
         fill: var(--color-grey-light);
@@ -169,9 +171,150 @@
   &-link {
     text-decoration: none;
     color: var(--color-grey-dark);
+    transition: color 0.3s ease;
 
     &:hover {
       color: var(--color-grey-light);
     }
   }
+}
+
+//////////////////////////////////////////////////
+/// MAIN CONTENT
+
+.content {
+  display: flex;
+
+  width: 140rem;
+  margin: 0 auto;
+}
+
+//////////////////////////////////////////////////
+/// SIDE NAVIGATION
+
+.sidenav {
+  flex: 0 0 15%;
+  padding: 2rem 0;
+}
+
+.image {
+  font-size: 1.1rem;
+  color: var(--color-grey-light);
+  text-transform: uppercase;
+  padding: 0 0 1rem 0;
+
+  &__cards {
+    width: 100%;
+  }
+
+  &__link {
+    color: var(--color-primary-light);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 1rem 0;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-grey-light);
+    }
+  }
+}
+
+.sidelist {
+  list-style: none;
+
+  &__title {
+    text-transform: uppercase;
+    margin: 1rem 0 0.5rem 0;
+  }
+
+  &__item {
+    line-height: 21px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-primary-light);
+    font-weight: 600;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: var(--color-grey-light);
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+/// GAMES HUD NAVIGATION
+
+.search {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+
+  &__wishlist {
+    margin-left: auto;
+    background-color: var(--color-primary-light);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+
+    span {
+      padding: 0 1.5rem;
+      line-height: 2;
+      color: #000;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background-color: var(--color-primary-light-1);
+      cursor: pointer;
+    }
+  }
+
+  &__navigation {
+    margin-top: 1rem;
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 55, 143, 0.3) 30%,
+      rgba(0, 55, 143, 1) 100%
+    );
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+    &--image {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  &__item {
+    padding: 1rem;
+
+    &:hover {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 55, 143, 0.3) 50%,
+        rgba(96, 239, 255, 0.3) 100%
+      );
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var(--color-grey-light);
+    font-weight: 700;
+    font-size: 1.4rem;
+  }
+}
+
+//////////////////////////////////////////////////
+/// GAMES HUD
+
+.games-hud {
+  padding: 0 5rem;
+  flex: 1;
 }
