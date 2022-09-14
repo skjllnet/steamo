@@ -291,7 +291,7 @@ body {
     font-weight: 400; }
   .slider__info--title {
     display: flex;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: 400;
     margin-top: 1rem; }
   .slider__info--grid {
@@ -324,7 +324,7 @@ body {
   .slider__info--tags {
     display: flex;
     gap: 0.5rem;
-    margin-top: 0.2rem;
+    margin-top: 0.4rem;
     margin-bottom: 2rem; }
   .slider__info--link {
     font-size: 1.2rem;
@@ -416,7 +416,6 @@ body {
   padding: 2rem 1.25rem;
   background-color: var(--color-primary-dark);
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
-  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
   z-index: 999; }
 
 .navigation__top {
