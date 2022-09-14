@@ -17,12 +17,12 @@
 
 .container {
   display: flex;
-  padding-top: 13rem;
+  padding-top: 12rem;
 }
 
 .slider {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 4rem;
-  background-color: red;
+  margin-top: 3rem;
 }
