@@ -61,8 +61,13 @@
     justify-content: center;
     align-items: center;
     flex: 0 0 50px;
-    background-color: var(--color-grey-dark);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 55, 143, 0.3) 50%,
+      rgba(96, 239, 255, 0.3) 100%
+    );
     padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: red;
@@ -74,8 +79,13 @@
     justify-content: space-around;
     align-items: center;
     flex: 0 0 50px;
-    background-color: var(--color-grey-dark);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 55, 143, 0.3) 50%,
+      rgba(96, 239, 255, 0.3) 100%
+    );
     padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
 
     &:hover {
       background-color: green;
@@ -99,6 +109,7 @@
       padding: 0 1.65rem;
       border-left: 2px solid var(--color-primary-light);
       opacity: 0.8;
+      transition: all 0.3s ease;
 
       &:hover {
         opacity: 1;
@@ -254,13 +265,18 @@
 
   &__wishlist {
     margin-left: auto;
-    background-color: var(--color-primary-light);
+    background-image: linear-gradient(
+      to right bottom,
+      rgba(0, 55, 143, 0.3) 50%,
+      rgba(96, 239, 255, 0.3) 100%
+    );
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+    transition: all 0.3s ease;
 
     span {
       padding: 0 1.5rem;
       line-height: 2;
-      color: #000;
+      color: var(--color-grey-light);
       font-weight: 600;
     }
 
@@ -271,12 +287,15 @@
   }
 
   &__navigation {
+    display: flex;
+    align-items: center;
     margin-top: 1rem;
     background-image: linear-gradient(
       to right bottom,
       rgba(0, 55, 143, 0.3) 30%,
       rgba(0, 55, 143, 1) 100%
     );
+    box-shadow: 0.5rem 0 0.5rem rgba(0, 0, 0, 0.1);
   }
 
   &__list {
@@ -308,6 +327,49 @@
     color: var(--color-grey-light);
     font-weight: 700;
     font-size: 1.4rem;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 2rem;
+
+    &--box {
+      padding: 0.5rem 1rem;
+      background-color: var(--color-primary-dark);
+      border: none;
+
+      &:focus {
+        outline: none;
+        color: var(--color-grey-dark);
+      }
+    }
+
+    &--btn {
+      border: none;
+      padding: 0.35rem 1.75rem;
+      background-image: linear-gradient(
+        to right bottom,
+        rgba(0, 55, 143, 0.3) 50%,
+        rgba(96, 239, 255, 0.3) 100%
+      );
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: var(--color-primary-light);
+      }
+
+      &:focus {
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
+      }
+    }
+
+    &--icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      fill: var(--color-grey-light);
+    }
   }
 }
 
