@@ -1,7 +1,8 @@
 :root {
   --color-primary: #00378f;
   --color-primary-light: #60efff;
-  --color-primary-dark: #001029;
+  --color-primary-dark: #00173d;
+  --color-primary-darker: #001029;
   --color-primary-darkest: #000815;
   --color-primary-light-1: #8bf3ff;
   --color-grey-light: #faf9f9;
@@ -28,7 +29,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--color-grey-light);
-  background-image: linear-gradient(to right bottom, var(--color-primary), var(--color-primary-dark));
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-darker));
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -64,11 +65,13 @@ body {
   .user__icon-1 {
     height: 1.5rem;
     width: 1.5rem;
-    fill: var(--color-grey-light); }
+    fill: var(--color-grey-light);
+    opacity: 0.7; }
   .user__icon-2 {
     height: 1.5rem;
     width: 1.5rem;
-    fill: var(--color-grey-light); }
+    fill: var(--color-grey-light);
+    opacity: 0.7; }
   .user__notification {
     display: flex;
     justify-content: center;
@@ -101,7 +104,7 @@ body {
       justify-content: space-between;
       align-items: center;
       padding: 0 1.65rem;
-      border-left: 2px solid var(--color-primary-light);
+      border-left: 3px solid var(--color-primary-light);
       opacity: 0.8;
       transition: all 0.3s ease; }
       .user__menu--profile:hover {
@@ -169,7 +172,7 @@ body {
     line-height: 21px; }
   .sidelist__link {
     text-decoration: none;
-    color: var(--color-primary-light);
+    color: var(--color-primary-light-1);
     font-weight: 600;
     transition: color 0.3s ease; }
     .sidelist__link:hover {
@@ -349,13 +352,14 @@ body {
   margin-top: 1rem; }
   .slider__tabs--icon {
     width: 1.8rem;
-    height: 0.9rem;
+    height: 0.8rem;
     background-color: rgba(250, 249, 249, 0.3);
     margin: 0.25rem;
     border-radius: 2px;
-    transition: all 0.3s ease; }
+    transition: all 0.2s ease; }
     .slider__tabs--icon:hover {
-      background-color: rgba(250, 249, 249, 0.5); }
+      background-color: rgba(250, 249, 249, 0.5);
+      height: 0.9rem; }
 
 .active {
   width: 1.8rem;
@@ -378,7 +382,7 @@ body {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 111%; }
+  width: 110.5%; }
   .slider__arrows--svg {
     width: 5rem;
     height: 5rem;
@@ -386,16 +390,15 @@ body {
 
 .left {
   height: 12rem;
-  background-image: linear-gradient(to right, rgba(96, 239, 255, 0.5) 30%, rgba(0, 55, 143, 0.1) 100%);
-  transition: background-color 0.3s ease; }
+  background-image: linear-gradient(to right, rgba(96, 239, 255, 0.5) 5%, rgba(0, 55, 143, 0.1) 100%);
+  transition: background-color 0.3s ease-in; }
   .left:hover {
-    background-color: var(--color-primary-light);
-    opacity: 0.8; }
+    background-color: var(--color-primary-light); }
 
 .right {
   height: 12rem;
-  background-image: linear-gradient(to right, rgba(0, 55, 143, 0.1) 30%, rgba(96, 239, 255, 0.5) 100%);
-  transition: background-color 0.3s ease; }
+  background-image: linear-gradient(to right, rgba(0, 55, 143, 0.1) 5%, rgba(96, 239, 255, 0.5) 100%);
+  transition: background-color 0.3s ease-in; }
   .right:hover {
     background-color: var(--color-primary-light);
     opacity: 0.8; }
@@ -440,7 +443,7 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   color: var(--color-primary-light-1);
-  height: 40rem; }
+  height: 39rem; }
   .offers__card--content {
     position: absolute;
     width: 100%;
@@ -462,7 +465,8 @@ body {
     color: green;
     background-color: yellowgreen;
     font-size: 2rem;
-    padding: 0 1rem; }
+    font-weight: 600;
+    padding: 0 1.25rem; }
   .offers__price--after {
     display: flex;
     flex-direction: column;
@@ -480,7 +484,7 @@ body {
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 106.4%; }
+  width: 106.3%; }
 
 .offers__svg {
   width: 3rem;
@@ -493,7 +497,7 @@ body {
   flex: 1;
   width: 100%;
   padding: 1rem 1.7rem 1rem 1.5rem;
-  background-color: var(--color-primary-dark);
+  background-color: var(--color-primary-darkest);
   box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
   z-index: 999; }
 

@@ -53,12 +53,14 @@
     height: 1.5rem;
     width: 1.5rem;
     fill: var(--color-grey-light);
+    opacity: 0.7;
   }
 
   &__icon-2 {
     height: 1.5rem;
     width: 1.5rem;
     fill: var(--color-grey-light);
+    opacity: 0.7;
   }
 
   &__notification {
@@ -112,7 +114,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 1.65rem;
-      border-left: 2px solid var(--color-primary-light);
+      border-left: 3px solid var(--color-primary-light);
       opacity: 0.8;
       transition: all 0.3s ease;
 
@@ -220,7 +222,7 @@
 
   &__link {
     text-decoration: none;
-    color: var(--color-primary-light);
+    color: var(--color-primary-light-1);
     font-weight: 600;
     transition: color 0.3s ease;
 
@@ -492,14 +494,15 @@
 
   &--icon {
     width: 1.8rem;
-    height: 0.9rem;
+    height: 0.8rem;
     background-color: rgba(250, 249, 249, 0.3);
     margin: 0.25rem;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 
     &:hover {
       background-color: rgba(250, 249, 249, 0.5);
+      height: 0.9rem;
     }
   }
 }
@@ -528,7 +531,7 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 111%;
+  width: 110.5%;
 
   &--svg {
     width: 5rem;
@@ -541,14 +544,13 @@
   height: 12rem;
   background-image: linear-gradient(
     to right,
-    rgba(96, 239, 255, 0.5) 30%,
+    rgba(96, 239, 255, 0.5) 5%,
     rgba(0, 55, 143, 0.1) 100%
   );
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in;
 
   &:hover {
     background-color: var(--color-primary-light);
-    opacity: 0.8;
   }
 }
 
@@ -556,10 +558,10 @@
   height: 12rem;
   background-image: linear-gradient(
     to right,
-    rgba(0, 55, 143, 0.1) 30%,
+    rgba(0, 55, 143, 0.1) 5%,
     rgba(96, 239, 255, 0.5) 100%
   );
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease-in;
 
   &:hover {
     background-color: var(--color-primary-light);
@@ -623,7 +625,7 @@
   flex-direction: column;
   justify-content: flex-start;
   color: var(--color-primary-light-1);
-  height: 40rem;
+  height: 39rem;
 
   &--content {
     position: absolute;
@@ -651,7 +653,8 @@
     color: green;
     background-color: yellowgreen;
     font-size: 2rem;
-    padding: 0 1rem;
+    font-weight: 600;
+    padding: 0 1.25rem;
   }
 
   &--after {
@@ -676,7 +679,7 @@
   top: 50%;
   right: 50%;
   transform: translate(50%, -50%);
-  width: 106.4%;
+  width: 106.3%;
 }
 
 .offers__svg {
