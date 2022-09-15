@@ -22,6 +22,12 @@
         cursor: pointer;
       }
     }
+
+    &--link-active {
+      text-decoration: none;
+      color: var(--color-grey-light);
+      cursor: pointer;
+    }
   }
 }
 
@@ -32,7 +38,6 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding-right: 3rem;
 
   & > *:not(:last-child) {
     margin-right: 1rem;
@@ -119,35 +124,6 @@
 }
 
 //////////////////////////////////////////////////
-/// OPTIONS
-
-.options {
-  display: flex;
-
-  &__box {
-    display: flex;
-    align-items: center;
-    &:not(:last-child) {
-      margin-right: 2rem;
-    }
-  }
-}
-
-//////////////////////////////////////////////////
-/// ICON
-
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--color-grey-dark);
-  transition: all 0.3s ease;
-
-  &:hover {
-    fill: var(--color-grey-light);
-  }
-}
-
-//////////////////////////////////////////////////
 /// BOTTOM NAVIGATION
 
 .list-bottom {
@@ -185,11 +161,20 @@
   &-link {
     text-decoration: none;
     color: var(--color-grey-light);
-    transition: text-shadow 0.3s ease;
+    opacity: 0.85;
+    transition: all 0.3s ease;
 
     &:hover {
+      opacity: 1;
       text-shadow: #fff 0 0 10px;
     }
+  }
+
+  &-link-active {
+    text-decoration: none;
+    color: var(--color-grey-light);
+    opacity: 1;
+    text-shadow: #fff 0 0 10px;
   }
 }
 

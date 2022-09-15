@@ -46,12 +46,15 @@ body {
     .list__item--link:hover {
       color: var(--color-grey-light);
       cursor: pointer; }
+  .list__item--link-active {
+    text-decoration: none;
+    color: var(--color-grey-light);
+    cursor: pointer; }
 
 .user {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding-right: 3rem; }
+  justify-content: flex-end; }
   .user > *:not(:last-child) {
     margin-right: 1rem; }
   .user__icon {
@@ -104,22 +107,6 @@ body {
       .user__menu--profile:hover {
         opacity: 1; }
 
-.options {
-  display: flex; }
-  .options__box {
-    display: flex;
-    align-items: center; }
-    .options__box:not(:last-child) {
-      margin-right: 2rem; }
-
-.icon {
-  width: 1.5rem;
-  height: 1.5rem;
-  fill: var(--color-grey-dark);
-  transition: all 0.3s ease; }
-  .icon:hover {
-    fill: var(--color-grey-light); }
-
 .list-bottom {
   display: flex;
   justify-content: flex-start;
@@ -145,9 +132,16 @@ body {
   .list-item-bottom-link {
     text-decoration: none;
     color: var(--color-grey-light);
-    transition: text-shadow 0.3s ease; }
+    opacity: 0.85;
+    transition: all 0.3s ease; }
     .list-item-bottom-link:hover {
+      opacity: 1;
       text-shadow: #fff 0 0 10px; }
+  .list-item-bottom-link-active {
+    text-decoration: none;
+    color: var(--color-grey-light);
+    opacity: 1;
+    text-shadow: #fff 0 0 10px; }
 
 .image {
   font-size: 1.1rem;
@@ -493,8 +487,10 @@ body {
   fill: var(--color-grey-light); }
 
 .navigation {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   position: fixed;
+  flex: 1;
   width: 100%;
   padding: 1rem 1.7rem 1rem 1.5rem;
   background-color: var(--color-primary-dark);
@@ -513,18 +509,34 @@ body {
   padding-bottom: 9rem; }
 
 .content {
+  position: relative;
   display: flex;
   margin: 0 auto; }
 
 .sidenav {
+  position: relative;
   flex: 0 0 15%;
   padding: 4rem 0 2rem 0;
-  margin-right: 4rem; }
+  margin-right: 4rem;
+  transition: all 0.2s ease;
+  z-index: 1; }
+  @media only screen and (max-width: 1232px) {
+    .sidenav {
+      transform: translateX(30%) scale(90%);
+      top: 0;
+      right: 0;
+      opacity: 0; } }
 
 .games-hud {
+  position: relative;
   max-width: 940px;
   width: 100%;
-  flex: 1; }
+  flex: 1;
+  transition: all 0.3s ease;
+  z-index: 50; }
+  @media only screen and (max-width: 1232px) {
+    .games-hud {
+      transform: translateX(-11%); } }
 
 .slider {
   display: flex;
