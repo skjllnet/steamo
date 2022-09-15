@@ -194,22 +194,7 @@
 }
 
 //////////////////////////////////////////////////
-/// MAIN CONTENT
-
-.content {
-  display: flex;
-
-  width: 125rem;
-  margin: 0 auto;
-}
-
-//////////////////////////////////////////////////
 /// SIDE NAVIGATION
-
-.sidenav {
-  flex: 0 0 15%;
-  padding: 4rem 0 2rem 0;
-}
 
 .image {
   font-size: 1.1rem;
@@ -278,10 +263,10 @@
     transition: all 0.3s ease;
 
     span {
-      padding: 0 1.5rem;
+      padding: 0 1.75rem;
       line-height: 2;
       color: var(--color-grey-light);
-      font-weight: 600;
+      font-weight: 400;
     }
 
     &:hover {
@@ -304,7 +289,7 @@
 
   &__list {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     list-style: none;
 
     &--image {
@@ -315,22 +300,18 @@
   }
 
   &__item {
-    padding: 1rem;
-
-    &:hover {
-      background-image: linear-gradient(
-        to right bottom,
-        rgba(0, 55, 143, 0.3) 80%,
-        rgba(96, 239, 255, 0.3) 100%
-      );
-    }
-  }
-
-  &__link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--color-grey-light);
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 1rem;
+    transition: all 0.5s ease;
+
+    &:hover {
+      background-color: rgba(96, 239, 255, 0.3);
+    }
   }
 
   &__input {
@@ -353,7 +334,7 @@
     &--btn {
       display: flex;
       border: none;
-      padding: 0.35rem 1.75rem;
+      padding: 0.5rem 1.75rem;
       background-image: linear-gradient(
         to right bottom,
         rgba(96, 239, 255, 0.9) 30%,
@@ -379,14 +360,6 @@
 }
 
 //////////////////////////////////////////////////
-/// GAMES HUD
-
-.games-hud {
-  padding: 0 5rem;
-  flex: 1;
-}
-
-//////////////////////////////////////////////////
 /// SLIDER
 
 .slider__header {
@@ -404,14 +377,13 @@
   height: 35rem;
   background-color: var(--color-primary-darkest);
   box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7);
-  border-radius: 3px;
 }
 
 .slider__main {
   background-image: url(/img/screenshot_2.jpg);
   background-size: cover;
   background-repeat: none;
-  flex: 0 0 63.6%;
+  flex: 0 0 58%;
 }
 
 .slider__info {
@@ -554,6 +526,14 @@
   background-color: rgba(250, 249, 249, 0.8);
 }
 
+.half-step {
+  width: 1.8rem;
+  height: 0.9rem;
+  margin: 0.25rem;
+  border-radius: 2px;
+  background-color: rgba(250, 249, 249, 0.5);
+}
+
 .slider__arrows {
   display: flex;
   justify-content: space-between;
@@ -599,4 +579,121 @@
     background-color: var(--color-primary-light);
     opacity: 0.8;
   }
+}
+
+//////////////////////////////////////////////////
+/// BANNER
+
+.offers__banner {
+  display: block;
+  background: url("https://cdn.akamai.steamstatic.com/steam/clusters/takeunder/d10bae3e70e7a6afc711fa71/takeunder_desktop_english.jpg?t=1663183025")
+    no-repeat center;
+  max-width: 940px; //max-width means it can get smaller but it can't get bigger
+  width: 100%;
+  height: 15.4vw;
+  max-height: 150px;
+  background-size: cover;
+}
+
+//////////////////////////////////////////////////
+/// SPECIAL OFFERS
+
+.offers__grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.offers__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  &--heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  &--btn {
+    color: var(--color-grey-light);
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--color-grey-dark);
+    padding: 0.2rem 1.25rem;
+
+    &:hover {
+      border: 1px solid var(--color-grey-light);
+    }
+  }
+}
+
+.offers__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--color-primary-light-1);
+  height: 40rem;
+
+  &--content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-primary-dark);
+    padding: 1.5rem;
+  }
+
+  &--heading {
+    text-transform: uppercase;
+    color: var(--color-grey-light);
+    margin-bottom: 1.75rem;
+  }
+}
+
+.offers__price {
+  display: flex;
+  margin-top: 0.75rem;
+
+  &--discount {
+    display: flex;
+    align-items: center;
+    color: green;
+    background-color: yellowgreen;
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  &--after {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0 1rem;
+  }
+
+  &--strike {
+    text-decoration: line-through;
+    color: var(--color-grey-light);
+  }
+}
+
+.offers__arrows {
+  display: flex;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 106.4%;
+}
+
+.offers__svg {
+  width: 3rem;
+  fill: var(--color-grey-light);
 }

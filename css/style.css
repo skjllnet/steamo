@@ -149,15 +149,6 @@ body {
     .list-item-bottom-link:hover {
       text-shadow: #fff 0 0 10px; }
 
-.content {
-  display: flex;
-  width: 125rem;
-  margin: 0 auto; }
-
-.sidenav {
-  flex: 0 0 15%;
-  padding: 4rem 0 2rem 0; }
-
 .image {
   font-size: 1.1rem;
   color: var(--color-grey-light);
@@ -200,10 +191,10 @@ body {
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.7);
     transition: all 0.3s ease; }
     .search__wishlist span {
-      padding: 0 1.5rem;
+      padding: 0 1.75rem;
       line-height: 2;
       color: var(--color-grey-light);
-      font-weight: 600; }
+      font-weight: 400; }
     .search__wishlist:hover {
       background-color: var(--color-primary-light-1);
       cursor: pointer; }
@@ -215,21 +206,23 @@ body {
     box-shadow: 0.5rem 0 0.5rem rgba(0, 0, 0, 0.1); }
   .search__list {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     list-style: none; }
     .search__list--image {
       width: 2rem;
       height: 2rem;
       margin-right: 1rem; }
   .search__item {
-    padding: 1rem; }
-    .search__item:hover {
-      background-image: linear-gradient(to right bottom, rgba(0, 55, 143, 0.3) 80%, rgba(96, 239, 255, 0.3) 100%); }
-  .search__link {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: var(--color-grey-light);
-    font-weight: 700;
-    font-size: 1.4rem; }
+    font-weight: 500;
+    font-size: 1.2em;
+    padding: 1rem;
+    transition: all 0.5s ease; }
+    .search__item:hover {
+      background-color: rgba(96, 239, 255, 0.3); }
   .search__input {
     display: flex;
     align-items: center;
@@ -245,7 +238,7 @@ body {
     .search__input--btn {
       display: flex;
       border: none;
-      padding: 0.35rem 1.75rem;
+      padding: 0.5rem 1.75rem;
       background-image: linear-gradient(to right bottom, rgba(96, 239, 255, 0.9) 30%, rgba(0, 55, 143, 0.9) 100%);
       transition: background-color 0.3s ease; }
       .search__input--btn:hover {
@@ -256,10 +249,6 @@ body {
       width: 1.5rem;
       height: 1.5rem;
       fill: var(--color-grey-light); }
-
-.games-hud {
-  padding: 0 5rem;
-  flex: 1; }
 
 .slider__header {
   font-size: 1.4rem;
@@ -274,14 +263,13 @@ body {
   width: 100%;
   height: 35rem;
   background-color: var(--color-primary-darkest);
-  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7);
-  border-radius: 3px; }
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.7); }
 
 .slider__main {
   background-image: url(/img/screenshot_2.jpg);
   background-size: cover;
   background-repeat: none;
-  flex: 0 0 63.6%; }
+  flex: 0 0 58%; }
 
 .slider__info {
   width: 100%;
@@ -382,6 +370,13 @@ body {
   border-radius: 2px;
   background-color: rgba(250, 249, 249, 0.8); }
 
+.half-step {
+  width: 1.8rem;
+  height: 0.9rem;
+  margin: 0.25rem;
+  border-radius: 2px;
+  background-color: rgba(250, 249, 249, 0.5); }
+
 .slider__arrows {
   display: flex;
   justify-content: space-between;
@@ -411,6 +406,92 @@ body {
     background-color: var(--color-primary-light);
     opacity: 0.8; }
 
+.offers__banner {
+  display: block;
+  background: url("https://cdn.akamai.steamstatic.com/steam/clusters/takeunder/d10bae3e70e7a6afc711fa71/takeunder_desktop_english.jpg?t=1663183025") no-repeat center;
+  max-width: 940px;
+  width: 100%;
+  height: 15.4vw;
+  max-height: 150px;
+  background-size: cover; }
+
+.offers__grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.offers__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .offers__header--heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem; }
+  .offers__header--btn {
+    color: var(--color-grey-light);
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--color-grey-dark);
+    padding: 0.2rem 1.25rem; }
+    .offers__header--btn:hover {
+      border: 1px solid var(--color-grey-light); }
+
+.offers__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: var(--color-primary-light-1);
+  height: 40rem; }
+  .offers__card--content {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--color-primary-dark);
+    padding: 1.5rem; }
+  .offers__card--heading {
+    text-transform: uppercase;
+    color: var(--color-grey-light);
+    margin-bottom: 1.75rem; }
+
+.offers__price {
+  display: flex;
+  margin-top: 0.75rem; }
+  .offers__price--discount {
+    display: flex;
+    align-items: center;
+    color: green;
+    background-color: yellowgreen;
+    font-size: 2rem;
+    padding: 0 1rem; }
+  .offers__price--after {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 0 1rem; }
+  .offers__price--strike {
+    text-decoration: line-through;
+    color: var(--color-grey-light); }
+
+.offers__arrows {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 106.4%; }
+
+.offers__svg {
+  width: 3rem;
+  fill: var(--color-grey-light); }
+
 .navigation {
   display: grid;
   position: fixed;
@@ -427,10 +508,29 @@ body {
 
 .container {
   display: flex;
-  padding-top: 9rem; }
+  justify-content: center;
+  padding-top: 9rem;
+  padding-bottom: 9rem; }
+
+.content {
+  display: flex;
+  margin: 0 auto; }
+
+.sidenav {
+  flex: 0 0 15%;
+  padding: 4rem 0 2rem 0;
+  margin-right: 4rem; }
+
+.games-hud {
+  max-width: 940px;
+  width: 100%;
+  flex: 1; }
 
 .slider {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 3rem; }
+
+.offers {
+  margin-top: 4rem; }
