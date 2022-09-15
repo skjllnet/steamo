@@ -153,6 +153,7 @@
 .list-bottom {
   display: flex;
   justify-content: flex-start;
+  align-items: flex-end;
   margin-left: -1rem;
 
   .arrows {
@@ -173,8 +174,8 @@
 
 .list-item-bottom {
   list-style: none;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.4rem;
+  font-weight: 400;
   text-transform: uppercase;
 
   &:not(:last-child) {
@@ -183,11 +184,11 @@
 
   &-link {
     text-decoration: none;
-    color: var(--color-grey-dark);
-    transition: color 0.3s ease;
+    color: var(--color-grey-light);
+    transition: text-shadow 0.3s ease;
 
     &:hover {
-      color: var(--color-grey-light);
+      text-shadow: #fff 0 0 10px;
     }
   }
 }
@@ -198,7 +199,7 @@
 .content {
   display: flex;
 
-  width: 130rem;
+  width: 125rem;
   margin: 0 auto;
 }
 
@@ -410,57 +411,58 @@
   background-image: url(/img/screenshot_2.jpg);
   background-size: cover;
   background-repeat: none;
-  flex: 0 0 50%;
+  flex: 0 0 63.6%;
 }
 
 .slider__info {
   width: 100%;
-  padding-left: 2rem;
+  padding: 1.5rem;
 
   &--header {
-    padding-top: 1rem;
-    font-size: 3rem;
+    padding: 0 0 1rem 0;
+    font-size: 2.2rem;
     font-weight: 400;
   }
 
   &--title {
-    display: flex;
-    font-size: 1.6rem;
+    line-height: 1.2;
+    font-size: 1.7rem;
     font-weight: 400;
     margin-top: 1rem;
+    margin-bottom: 0.6rem;
   }
 
   &--grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
 
     &-img-1 {
       background-image: url(/img/screenshot.jpg);
       background-size: cover;
-      width: 17rem;
-      height: 8rem;
+      width: 15.5rem;
+      height: 7rem;
     }
 
     &-img-2 {
       background-image: url(/img/screenshot_4.jpg);
       background-size: cover;
-      width: 17rem;
-      height: 8rem;
+      width: 15.5rem;
+      height: 7rem;
     }
 
     &-img-3 {
       background-image: url(/img/screenshot_3.jpg);
       background-size: cover;
-      width: 17rem;
-      height: 8rem;
+      width: 15.5rem;
+      height: 7rem;
     }
 
     &-img-4 {
       background-image: url(/img/screenshot_1.jpg);
       background-size: cover;
-      width: 17rem;
-      height: 8rem;
+      width: 15.5rem;
+      height: 7rem;
     }
   }
 
@@ -473,15 +475,15 @@
     display: flex;
     gap: 0.5rem;
     margin-top: 0.4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
   }
 
   &--link {
-    font-size: 1.2rem;
-    background-color: var(--color-grey-dark);
+    font-size: 1rem;
+    background-color: var(--color-grey-darkest);
     color: var(--color-grey-light);
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0.1rem 0.7rem;
     border-radius: 2px;
   }
 
@@ -512,13 +514,13 @@
   }
 
   &--os {
-    margin-right: 2rem;
+    display: flex;
 
     &-icon {
-      width: 2rem;
-      height: 2rem;
+      width: 1.75rem;
+      height: 1.75rem;
       fill: var(--color-grey-light);
-      margin-left: 0.5rem;
+      margin-left: 0.6rem;
       opacity: 0.5;
     }
   }
