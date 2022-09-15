@@ -188,7 +188,8 @@
   padding: 0 0 1rem 1rem;
 
   &__cards {
-    width: 100%;
+    width: 15rem;
+    // width: 100%;
   }
 
   &__link {
@@ -586,7 +587,7 @@
 .offers__grid {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end;
 }

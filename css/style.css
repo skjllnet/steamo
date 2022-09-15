@@ -149,7 +149,7 @@ body {
   text-transform: uppercase;
   padding: 0 0 1rem 1rem; }
   .image__cards {
-    width: 100%; }
+    width: 15rem; }
   .image__link {
     color: var(--color-primary-light);
     text-decoration: none;
@@ -412,7 +412,7 @@ body {
 .offers__grid {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
   align-items: flex-end; }
 
@@ -518,25 +518,28 @@ body {
   flex: 0 0 15%;
   padding: 4rem 0 2rem 0;
   margin-right: 4rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   z-index: 1; }
-  @media only screen and (max-width: 1232px) {
+  @media only screen and (max-width: 1255px) {
     .sidenav {
-      transform: translateX(30%) scale(90%);
+      transform: translateX(30%);
       top: 0;
       right: 0;
-      opacity: 0; } }
+      opacity: 0;
+      flex: 0 0 0; } }
 
 .games-hud {
   position: relative;
   max-width: 940px;
   width: 100%;
   flex: 1;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   z-index: 50; }
-  @media only screen and (max-width: 1232px) {
+  @media only screen and (max-width: 1255px) {
     .games-hud {
-      transform: translateX(-11%); } }
+      transform: translateX(-11%);
+      max-width: 960px;
+      margin: 0 auto; } }
 
 .slider {
   display: flex;
